@@ -4,8 +4,6 @@ import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import platform.Platform;
@@ -43,6 +41,6 @@ public class LoginFormTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-       appiumDriver.quit();
+        appiumDriver.quit();
     }
 }

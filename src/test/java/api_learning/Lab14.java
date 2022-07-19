@@ -13,19 +13,20 @@ public class Lab14 {
         AppiumDriver<MobileElement> appiumDriver = null;
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setCapability("platformName","Android");
-        desiredCapabilities.setCapability("automationmName","uiautomator2");
-        desiredCapabilities.setCapability("udid","LMV409N0831cfe7");
-        desiredCapabilities.setCapability("appPackage","com.wdiodemoapp");
-        desiredCapabilities.setCapability("appActivity","com.wdiodemoapp.MainActivity");
+        desiredCapabilities.setCapability("platformName", "Android");
+        desiredCapabilities.setCapability("automationmName", "uiautomator2");
+//        desiredCapabilities.setCapability("udid","LMV409N0831cfe7");
+        desiredCapabilities.setCapability("udid", "3300a7eea5f993b3");
+        desiredCapabilities.setCapability("appPackage", "com.wdiodemoapp");
+        desiredCapabilities.setCapability("appActivity", "com.wdiodemoapp.MainActivity");
 
-       try {
-           URL appiumServer = new URL("http://localhost:4723/wd/hub");
-           appiumDriver = new AndroidDriver<MobileElement>(appiumServer, desiredCapabilities);
-//           Thread.sleep(3000);
-       } catch (Exception e) {
-           e.printStackTrace();
-       }
+        try {
+            URL appiumServer = new URL("http://localhost:4723/wd/hub");
+            appiumDriver = new AndroidDriver<MobileElement>(appiumServer, desiredCapabilities);
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         appiumDriver.quit();
 
     }
