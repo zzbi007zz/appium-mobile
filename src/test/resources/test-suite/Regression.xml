@@ -3,6 +3,8 @@
 <suite name="Regression" verbose="1" >
     <test name="Login" >
         <classes>
+<!--            <class name="tests.testng.TestNGHooks01" />-->
+<!--            <class name="tests.testng.TestNGHooks02" />-->
             <class name="tests.authen.LoginTest" />
         </classes>
     </test>

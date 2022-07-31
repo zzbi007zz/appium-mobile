@@ -26,10 +26,10 @@ public class LoginTest {
                 loginFlow.login();
                 loginFlow.verifyLogin();
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
+        appiumDriver.quit();
     }
 
     private static class LoginCred {

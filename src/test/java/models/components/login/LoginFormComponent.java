@@ -48,4 +48,6 @@ public class LoginFormComponent {
         appiumDriver.findElement(loginBtnSel).click();
     }
 
+
+
 }
