@@ -1,8 +1,7 @@
 package tests.gson;
 
 import com.google.gson.Gson;
-import test_data_model.LoginCred;
-import tests.authen.LoginTestWithDataProvider;
+import test_data.models.LoginCred;
 
 public class TestGson {
 

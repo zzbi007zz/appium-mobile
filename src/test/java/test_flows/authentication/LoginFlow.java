@@ -30,6 +30,7 @@ public class LoginFlow extends BaseFlow {
         if(!password.isEmpty()) {
             loginFormComponent.inputPassword(password);
         }
+
         loginFormComponent.clickOnLoginBtn();
     }
 
