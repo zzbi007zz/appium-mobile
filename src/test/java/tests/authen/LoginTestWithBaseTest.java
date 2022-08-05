@@ -15,7 +15,7 @@ public class LoginTestWithBaseTest extends BaseTest {
 
     @Test(dataProvider = "loginCredData")
     public void testLogin(LoginCred loginCred) {
-            LoginFlow loginFlow = new LoginFlow(appiumDriver,loginCred.getEmail(),loginCred.getPasssword());
+            LoginFlow loginFlow = new LoginFlow(getDriver(),loginCred.getEmail(),loginCred.getPasssword());
             loginFlow.gotoLoginScreen();
             loginFlow.login();
             loginFlow.verifyLogin();
