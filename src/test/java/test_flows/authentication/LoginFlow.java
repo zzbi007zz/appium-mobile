@@ -1,7 +1,9 @@
 package test_flows.authentication;
 
+import com.sun.xml.internal.ws.developer.StreamingAttachment;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.qameta.allure.Step;
 import models.components.login.LoginFormComponent;
 import models.pages.LoginScreen;
 import org.apache.commons.validator.routines.EmailValidator;
@@ -52,23 +54,25 @@ public class LoginFlow extends BaseFlow {
         }
     }
 
+    @Step("Verify login with correct username&password")
     private void verifyCorrectCred(LoginFormComponent loginFormComponent) {
         System.out.println("Verify correct credential");
         String actualValidUserPassword = loginFormComponent.validUserAndPassword();
         String expectValidUserPassword = "Success";
         System.out.println("actualValidUserPassword "+actualValidUserPassword);
         System.out.println("expectValidUserPassword "+expectValidUserPassword);
-
+        Assert.assertEquals(actualValidUserPassword,expectValidUserPassword);
     }
-
+    @Step("Verify login with incorrect email")
     private void verifyIncorrectMail(LoginFormComponent loginFormComponent) {
         System.out.println("Verify incorrect Email");
         String actualInvalidEmail = loginFormComponent.getInvalidEmail();
+//        String expectInvalidEmail = "Please enter a valid email addres";
         String expectInvalidEmail = "Please enter a valid email address";
         Assert.assertEquals(actualInvalidEmail,expectInvalidEmail,"[ERROR] Invalid email string" );
 
     }
-
+    @Step("Verify login with incorrect password")
     private void verifyIncorrectPassword(LoginFormComponent loginFormComponent) {
         System.out.println("Verify incorrect Password");
         String actualInvalidPassword = loginFormComponent.getInvalidPassword();

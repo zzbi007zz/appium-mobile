@@ -3,18 +3,17 @@
 <suite name="Regression" parallel="tests" thread-count="10">
     <test name="Login 1" >
         <parameter name="udid" value="3300a7eea5f993b3"></parameter>
-        <parameter name="systemPort" value="6800"></parameter>
+        <parameter name="systemPort" value="8300"></parameter>
         <classes>
             <class name="tests.parallel.Login" />
         </classes>
     </test>
     <test name="Login 2" >
         <parameter name="udid" value="emulator-5554"></parameter>
-        <parameter name="systemPort" value="8500"></parameter>
+        <parameter name="systemPort" value="8400"></parameter>
         <classes>
             <class name="tests.form.FormTest" />
         </classes>
     </test>
-
 
 </suite>

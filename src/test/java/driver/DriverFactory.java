@@ -33,7 +33,7 @@ public class DriverFactory implements MobileCapabilityTypeEx {
         };
 
         if (appiumServer == null)
-            throw new RuntimeException("Runtime construct the appium server url");
+            throw new RuntimeException("Cannot connect to selenium grid");
 
 
         switch (platform){
@@ -60,15 +60,16 @@ public class DriverFactory implements MobileCapabilityTypeEx {
             desiredCapabilities.setCapability(APP_ACTIVITY, "com.wdiodemoapp.MainActivity");
             desiredCapabilities.setCapability(SYSTEM_PORT, systemPort);
             URL appiumServer = null;
+            String targetServer = "http://192.168.1.13:4444/wd/hub";
             try {
-                appiumServer = new URL("http://localhost:4723/wd/hub");
+                appiumServer = new URL(targetServer);
             } catch (Exception e) {
                 e.printStackTrace();
             }
             ;
 
             if (appiumServer == null)
-                throw new RuntimeException("Runtime construct the appium server url");
+                throw new RuntimeException("Cannot connect to selenium grid");
 
             switch (platform) {
 
@@ -80,7 +81,7 @@ public class DriverFactory implements MobileCapabilityTypeEx {
                     break;
 
             }
-            appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            appiumDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         }
         return appiumDriver;
     }

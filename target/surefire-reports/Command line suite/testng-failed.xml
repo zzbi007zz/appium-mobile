@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test thread-count="5" name="Command line test(failed)" verbose="0">
+    <classes>
+      <class name="tests.testng.TestParameter2">
+        <methods>
+          <include name="testParameter"/>
+        </methods>
+      </class> <!-- tests.testng.TestParameter2 -->
+      <class name="tests.testng.TestParameter">
+        <methods>
+          <include name="testParameter"/>
+        </methods>
+      </class> <!-- tests.testng.TestParameter -->
+      <class name="tests.authen.LoginTestWithBaseTest">
+        <methods>
+          <include name="initAppiumSession"/>
+          <include name="quitAppiumSession"/>
+          <include name="testLogin"/>
+        </methods>
+      </class> <!-- tests.authen.LoginTestWithBaseTest -->
+      <class name="tests.testng.TestNGHooks01">
+        <methods>
+          <include name="test02"/>
+          <include name="test01"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="beforeSuit"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- tests.testng.TestNGHooks01 -->
+      <class name="tests.testng.TestNGHooks02">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="test02"/>
+          <include name="test03"/>
+          <include name="test01"/>
+          <include name="beforeClass"/>
+          <include name="beforeSuit"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- tests.testng.TestNGHooks02 -->
+      <class name="tests.form.FormTest">
+        <methods>
+          <include name="testFormFlow"/>
+          <include name="initAppiumSession"/>
+          <include name="quitAppiumSession"/>
+        </methods>
+      </class> <!-- tests.form.FormTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
