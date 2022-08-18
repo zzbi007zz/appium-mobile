@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
 public class HandleVariantBehaviour implements MobileCapabilityTypeEx {
 
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         try{
             Capabilities caps = appiumDriver.getCapabilities();
             String platform = CapabilityHelpers.getCapability(caps,PLATFORM_NAME,String.class);

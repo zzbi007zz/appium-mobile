@@ -11,7 +11,7 @@ public class LoginWithMod01 {
 
 
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         try {
             MobileElement navLoginScreen = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));
             navLoginScreen.click();

@@ -22,7 +22,7 @@ public class LoginFormTest {
 
         AppiumDriver<MobileElement> appiumDriver = null;
         try {
-            appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+            appiumDriver = DriverFactory.getDriver(Platform.android);
 
             MobileElement loginScreenBtnElem = appiumDriver.findElement(MobileBy.AccessibilityId(NAV_LOGIN));
             loginScreenBtnElem.click();

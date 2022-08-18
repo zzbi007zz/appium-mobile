@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
 public class TakingScreenShot {
 
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         try {
             MobileElement navLoMobileElement = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));
             navLoMobileElement.click();

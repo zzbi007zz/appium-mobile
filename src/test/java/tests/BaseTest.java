@@ -9,6 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import platform.Platform;
 
@@ -26,16 +27,21 @@ public class BaseTest {
 
     private String udid;
     private String systemPort;
+    private String platformName;
+    private String platformVersion;
+
 
     protected AppiumDriver<MobileElement> getDriver() {
-        return driverThread.get().getDriver(Platform.ANDROID, udid, systemPort);
+        return driverThread.get().getDriver(Platform.valueOf(platformName), udid, systemPort, platformVersion);
     }
 
     @BeforeTest
-    @Parameters({"udid", "systemPort"})
-    public void initAppiumSession(String udid, String systemPort) {
+    @Parameters({"udid", "systemPort","platformName","platformVersion"})
+    public void initAppiumSession(String udid, String systemPort,String platform,@Optional("platformVersion") String platformVersion) {
         this.udid = udid;
         this.systemPort = systemPort;
+        this.platformName = platformName;
+        this.platformVersion = platformVersion;
        driverThread = ThreadLocal.withInitial(()-> {
             DriverFactory driverThread = new DriverFactory();
             driverThreadPool.add(driverThread);

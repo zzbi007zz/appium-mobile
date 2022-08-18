@@ -26,7 +26,7 @@ public class HandleMultiApp {
     private static String SUCESS_ALERT = "android:id/alertTitle";
 
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         try{
             MobileElement loginScreenBtnElem = appiumDriver.findElement(MobileBy.AccessibilityId(NAV_LOGIN));
             loginScreenBtnElem.click();

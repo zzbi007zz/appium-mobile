@@ -18,7 +18,7 @@ import java.util.NoSuchElementException;
 public class SwipeHorizolly {
 
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         try {
             MobileElement swipeButtonElem = appiumDriver.findElement(MobileBy.AccessibilityId("Swipe"));
             swipeButtonElem.click();
