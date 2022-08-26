@@ -56,7 +56,7 @@ public class BaseTest {
        driverThread.get().quitAppiumDriver();
     }
 
-
+    @AfterMethod(description = "Capture screenshot if test failed")
     public void captureScreenShot(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE) {
             String testMethodName = result.getName();

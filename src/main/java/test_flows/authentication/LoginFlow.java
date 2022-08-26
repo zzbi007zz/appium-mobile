@@ -1,6 +1,5 @@
 package test_flows.authentication;
 
-import com.sun.xml.internal.ws.developer.StreamingAttachment;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.qameta.allure.Step;

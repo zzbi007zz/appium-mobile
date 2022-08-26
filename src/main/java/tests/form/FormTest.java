@@ -8,7 +8,6 @@ public class FormTest extends BaseTest {
 
     @Test
     public void testFormFlow() {
-//        System.out.println("Session Id: "+ getDriver().getSessionId());
         FormFlow formFlow = new FormFlow(getDriver());
         formFlow.gotoFormScreen();
         formFlow.fillTheForm();
